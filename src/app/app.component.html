@@ -9,7 +9,7 @@
          [(ngModel)]="msgVal"/>
   <div id="details-container" *ngIf="(user | async)?.uid">
     <p *ngFor="let item of items | async">
-      <span><img src="../assets/images/pin.svg"></span>
+      <span><img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678093-pin-128.png"></span>
       <span><img src="https://cdn2.iconfinder.com/data/icons/humano2/128x128/actions/edit-delete.png" (click)="deleteOneItem(item.$key)" style="height: 25px; float: right; padding-left: 10px;"></span>
       {{item.message}}
     </p>
