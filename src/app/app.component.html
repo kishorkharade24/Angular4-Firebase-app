@@ -1,0 +1,17 @@
+<div class="row columns">
+  <button (click)="login()" *ngIf="!(user | async)?.uid">Anonymous Login</button>
+  <button (click)="logout()" *ngIf="(user | async)?.uid">Logout</button>
+
+  <input id="message" type="text"
+         *ngIf="(user | async)?.uid"
+         placeholder="What is that you do?"
+         (keyup.enter)="send($event.target.value)"
+         [(ngModel)]="msgVal"/>
+  <div id="details-container" *ngIf="(user | async)?.uid">
+    <p *ngFor="let item of items | async">
+      <span><img src="../assets/images/pin.svg"></span>
+      <span><img src="../assets/images/delete.png" (click)="deleteOneItem(item.$key)" style="height: 25px; float: right; padding-left: 10px;"></span>
+      {{item.message}}
+    </p>
+  </div>
+</div>

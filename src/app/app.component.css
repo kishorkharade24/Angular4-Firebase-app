@@ -1,0 +1,31 @@
+input#message {
+  background:#fff;
+  border:none;
+  outline:none;
+  box-shadow:none;
+  font-size:1.6em;
+  font-weight:300;
+  margin-bottom: 3em;
+  padding:1.2em .7em;
+}
+
+#details-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  width:100%;
+}
+
+#details-container p {
+  background:#fff;
+  padding:1.4em;
+  color:#696969;
+  margin: 12px;
+  width:auto;
+  min-width:200px;
+}
+
+img {
+  display:block;
+  margin-bottom:12px;
+}
